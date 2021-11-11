@@ -238,7 +238,7 @@ There's another benefit that should not be discounted: changing an implementatio
 +async fn* merge_overlapping_intervals(
 +    input: impl Stream<Item = Interval>,
  ) yields Interval {
-+    let mut input = Box::pin(input); // Hello `Box` my old friend. I'm here to `pin` you again 🎶
++    let mut input = Box::pin(input); // Hello `Box` my old friend. I'm here to call `pin` on you again 🎶
 -    let mut prev = input.next()?;
 +    let mut prev = input.next().await?;
 -    for i in input {
