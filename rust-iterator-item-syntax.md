@@ -242,7 +242,7 @@ There's another benefit that should not be discounted: changing an implementatio
 -    let mut prev = input.next()?;
 +    let mut prev = input.next().await?;
 -    for i in input {
-+    while let Some(i) = input.next().await { // We might want special for iterating a `Stream`
++    while let Some(i) = input.next().await { // We might want special syntax for iterating a `Stream`
          if prev.overlaps(&i) {
              prev = prev.merge(&i);
          } else {
