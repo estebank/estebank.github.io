@@ -239,7 +239,7 @@ There's another benefit that should not be discounted: changing an implementatio
 +    input: impl Stream<Item = Interval>,
  ) yields Interval {
 +    let mut input = Box::pin(input); // Hello `Box` my old friend. I'm here to `pin` you again 🎶
--    let Some(mut prev) = input.next() else {
+-    let mut prev = input.next()?;
 +    let mut prev = input.next().await?;
 -    for i in input {
 +    while let Some(i) = input.next().await { // We might want special for iterating a `Stream`
