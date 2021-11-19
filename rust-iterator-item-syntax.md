@@ -128,7 +128,7 @@ trait Iterator {
 }
 ```
 
-Another element from the `Generator` trait you can observe is the type argument `R`, which by default is `()`. This type argument is then used in `resume`. It let's us pass information *into* the `Generator` and modify its behavior on the next iteration based on what is passed in. This would be useful for implementing a Lexer or Parser in terms of a generator, for example. But doing this is in a satisfactory manner would require new consumer-side syntax, for the vast majority of use-cases I believe these are not necessary, *and* we can design things so that whatever we do *isn't* a one way door. We can stabilize a subset of the feature *without* closing the door to extensions.
+Another element from the `Generator` trait you can observe is the type argument `R`, which by default is `()`. This type argument is then used in `resume`. It lets us pass information *into* the `Generator` and modify its behavior on the next iteration based on what is passed in. This would be useful for implementing a Lexer or Parser in terms of a generator, for example. But doing this is in a satisfactory manner would require new consumer-side syntax, for the vast majority of use-cases I believe these are not necessary, *and* we can design things so that whatever we do *isn't* a one way door. We can stabilize a subset of the feature *without* closing the door to extensions.
 
 The final difference you can see is that the `resume` function takes `Pin<&mut self>`, instead of `&mut self` like `Iterator` does. This means that some bridging is needed to interface `G: Generator` and `I: Iterator`, we can't just `impl<G: Generator> Iterator for G`. But we *can* write a new-type that gets us there:
 
@@ -256,7 +256,7 @@ There's another benefit that should not be discounted: changing an implementatio
 
 I also think that the final feature *must* be part of the language, not because it can't be done otherwise (maybe with more effort), but because there are lots of UX niceties that can come with it. Namely, the diagnostic errors that `rustc` provides can be *much* nicer. rust-analyzer could easily let you transform from the iterator item syntax to expanded `struct` and `impl` blocks for when you need full control. People who come from other languages that *expect* `yield` to do something won't get weird errors talking about "nightly".
 
-## Request For Help <br/><small>🗺 Lets go exploring!</small>
+## Request For Help <br/><small>🗺 Let's go exploring!</small>
 
 One of the problems I'm facing is that when introducing a new item to the syntax, it immediately turns into a bike-shed discussion. No clear "right" answer can be arrived to, and opinions fly right and left.
 
