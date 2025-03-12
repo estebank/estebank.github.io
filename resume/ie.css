@@ -1,0 +1,60 @@
+body {
+  position: relative;
+  min-width: 760px;
+}
+.content {
+  width: 700px;
+}
+.footer {
+  width: 700px;
+}
+.experience {
+  padding-top: 0;
+}
+h2 {
+  margin: 0 0 0 -140px;
+}
+.experience h2 {
+  padding-top: 10px;
+}
+.experience h3#travelbird {
+  border: none;
+}
+div.tick {
+  display: none;
+}
+ul {
+  margin-left: 0;
+}
+ul li p {
+  display: inline;
+  margin: 0 6px 0 0 !important;
+  border: 0 !important;
+  padding: 0 !important;
+  width: auto !important;
+  background-color: white !important;
+  background: none !important;
+}
+ul li p.go-up {
+  display: none;
+}
+div.timeline {
+  margin-top: 0 !important;
+}
+div.timeline div.tick p.tick {
+  display: inline;
+  zoom: 1;
+}
+div.timeline h4 {
+  float: none;
+  display: inline;
+  width: auto;
+  margin: 0 10px 0 0;
+  color: #333;
+}
+.timeline li {
+  list-style-type: disc;
+}
+ul.skills {
+  display: block;
+}
