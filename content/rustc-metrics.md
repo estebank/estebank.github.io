@@ -1,6 +1,11 @@
-# No telemetry in the Rust compiler: metrics without betraying user privacy
-
-*Esteban Küber, 2023-08-01*
++++
+title = "No telemetry in the Rust compiler"
+date = 2023-08-01
+authors = ["Esteban Küber"]
+aliases = ["rustc-metrics.html"]
+[extra]
+subtitle = "Metrics without betraying user privacy"
++++
 
 **Trust is easily lost, and difficult to recover.** The Rust community trusts us, its maintainers, to ship reliable tooling. Users also trust us to respect their privacy. In order to maintain the reliability of our tooling, we mainly rely on our users' feedback, but this leaves us with limited visibility into the impact of changes we've made to the compiler.
 

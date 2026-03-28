@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block title %}{{ page.title }}{% if page.extra.subtitle %}: {{page.extra.subtitle}}{% endif %}{% endblock content %}
+{% block content %}
+<h1 class="title">
+  {{ page.title }}
+  {% if page.extra.subtitle %}<br/><small>{{ page.extra.subtitle }}</small>{% endif %}
+</h1>
+<p><i>{{ page.authors[0] }}, {{ page.date }}</i></p>
+{{ page.content | safe }}
+{% endblock content %}

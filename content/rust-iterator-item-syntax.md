@@ -1,4 +1,11 @@
-# Rust Iterator Items <br/><small>An exploration of syntax</small>
++++
+title = "Rust Iterator Items"
+date = 2021-11-10
+authors = ["Esteban Küber"]
+aliases = ["rust-iterator-item-syntax.html"]
+[extra]
+subtitle = "An exploration of syntax"
++++
 
 *TL;DR: [I think we should add generators to Rust](#Proposal-Iterator-Items). I’ve implemented [a prototype of my proposal using a procedural macro][iterator_item], and I would love people to [open issues][file tickets] and/or [PRs with implementations or potential syntax][PRs] and other ideas around the syntax of the feature.*
 
@@ -63,7 +70,9 @@ impl<I: Iterator<Item = Interval>> Iterator for MergeOverlappingIntervals<I> {
     }
 }
 
-fn merge_overlapping_intervals(mut input: impl Iterator<Item = Interval>) -> impl Iterator<Item = Interval> {
+fn merge_overlapping_intervals(
+    mut input: impl Iterator<Item = Interval>,
+) -> impl Iterator<Item = Interval> {
     let prev = input.next();
     MergeOverlappingIntervals { input, prev }
 }
@@ -80,7 +89,9 @@ I believe such a feature in Rust would be desirable. This might not give you the
 What if in Rust we could write something along the lines of the following?
 
 ```rust
-fn merge_overlapping_intervals(input: impl Iterator<Interval>) -> impl Iterator<Item = Interval> {
+fn merge_overlapping_intervals(
+    input: impl Iterator<Interval>,
+) -> impl Iterator<Item = Interval> {
     let mut prev = input.next()?;
     for i in input {
         if prev.overlaps(&i) {
@@ -155,7 +166,7 @@ Because of all of this, I want to focus on providing a way to create `Iterator`s
 [tmandry async/await]: https://tmandry.gitlab.io/blog/posts/optimizing-await-1/
 [trait Generator]: https://doc.rust-lang.org/stable/std/ops/trait.Generator.html
 [wg-async roadmap]: https://rust-lang.github.io/wg-async-foundations/vision/roadmap.html
-[why impl?]: https://twitter.com/ekuber/status/1392608787568029703
+[why impl?]: https://web.archive.org/web/20210512223326/https://twitter.com/ekuber/status/1392608787568029703
 
 ## Going on a tangent <br/><small>`std::iter::from_fn` and friends</small>
 
@@ -164,7 +175,9 @@ There's one elephant in the room when talking about generators in Rust: [`from_f
 You can represent [the solution we've talked about in terms of `from_fn`][from_fn solution]:
 
 ```rust
-fn merge_overlapping_intervals(mut input: impl Iterator<Item = Interval>) -> impl Iterator<Item = Interval> {
+fn merge_overlapping_intervals(
+    mut input: impl Iterator<Item = Interval>,
+) -> impl Iterator<Item = Interval> {
     let mut prev = input.next();
     std::iter::from_fn(move || {
         while let Some(i) = input.next() {

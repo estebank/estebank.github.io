@@ -1,4 +1,9 @@
-# Sustainable growth and visibility
++++
+title = "Sustainable growth and visibility"
+date = 2021-10-26
+authors = ["Esteban Küber"]
+aliases = ["sustainable-growth-and-visibility.html"]
++++
 
 The Rust project and ecosystem have grown dramatically over last couple of years. Between the creation of The Rust Foundation, increasing adoption and a lot of development work by contributors of varied background, I am incredibly proud of the accomplishments and current state of the project.
 
@@ -10,7 +15,12 @@ What makes Rust "Rust" isn't "just" the compiler, or the official tooling: Rust 
 
 The long term health of the Rust ecosystem is very important, and ensuring it requires for us not only to grow over time, but to make sure we can scale appropriately. And accomplishing that means making sure that critical parts of our ecosystem are "well staffed" and capable of maintaining themselves and that no individual maintainer burns out.
 
-<a style="float: right; margin: 2em;" href="https://xkcd.com/2347/"><img src="//imgs.xkcd.com/comics/dependency.png" title="Someday ImageMagick will finally break for good and we'll have a long period of scrambling as we try to reassemble civilization from the rubble." alt="Dependency" srcset="//imgs.xkcd.com/comics/dependency_2x.png 2x" style="image-orientation:none"></a>
+<a style="float: right; margin: 2em;" href="https://xkcd.com/2347/"><img src="//imgs.xkcd.com/comics/dependency.png"
+  title="Someday ImageMagick will finally break for good and we'll have a long period of scrambling as we try to reassemble civilization from the rubble."
+  alt="XKCD comic 'Dependency': [A tower of blocks is shown. The upper half consists of many tiny blocks balanced on top of one another to form smaller towers, labeled:] All modern digital infrastructure. [The blocks rest on larger blocks lower down in the image, finally on a single large block. This is balanced on top of a set of blocks on the left, and on the right, a single tiny block placed on its side. This one is labeled:] A project some random person in Nebraska has been thanklessly maintaining since 2003"
+  srcset="//imgs.xkcd.com/comics/dependency_2x.png 2x"
+  style="image-orientation:none"
+></a>
 
 Newcomers interested in helping are driven, but the community could do better to help them find where they can do so. Individual teams have preasence in Zulip where we can individually help them. It has documentation for new contributors. The backlog is well groomed and all of the teams operate in the open. Projects from the wider community operate in different ways, but usually follow similar arrangements.
 
@@ -41,7 +51,8 @@ My long term objective is for this tool to become a full-blown automated service
 
 Having this information available, not only will let the project direct our efforts, it lets us do so *early*, by being able to detect potential issues *before* they are *felt* by the maintainers. Increasing the number of knowledgeable contributors involved in critical libraries helps *every* contributor in those projects: PRs and issues will have faster turn-around. And having this information out in the public allows others to independently evaluate our health as well.
 
-If the Optopodi tool and its goals are appealing to you, you can [see the current code base on GitHub](https://github.com/optopodi/optopodi), where there are [outstanding feature requests you can implement and where you can file new tickets](https://github.com/optopodi/optopodi/issues) to shape the tool, and as well as reach out to it's contributors at the [GitHub Metrics Zulip Chat](https://github-metrics.zulipchat.com/). And if you have thoughts on this blog post and the vision presented, independently of the tools, I am also interested in hearing from you on [Zulip](https://rust-lang.zulipchat.com/#narrow/pm-with/119031-user119031) and [Twitter](https://twitter.com/ekuber/status/1453078598160506880).
+If the Optopodi tool and its goals are appealing to you, you can [see the current code base on GitHub](https://github.com/optopodi/optopodi), where there are [outstanding feature requests you can implement and where you can file new tickets](https://github.com/optopodi/optopodi/issues) to shape the tool, and as well as reach out to it's contributors at the [GitHub Metrics Zulip Chat](https://github-metrics.zulipchat.com/). And if you have thoughts on this blog post and the vision presented, independently of the tools, I am also interested in hearing from you on [Zulip](https://rust-lang.zulipchat.com/#narrow/pm-with/119031-user119031) and [Twitter].
 
 
 [Optopodi]: https://github.com/optopodi/optopodi
+[Twitter]: https://web.archive.org/web/20211026211412/https://twitter.com/ekuber/status/1453078598160506880

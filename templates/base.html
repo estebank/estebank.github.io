@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>{% block title %}Esteban Küber{% endblock title %}</title>
+<style>
+main {
+max-width: 40em;
+margin: auto;
+text-align: justify;
+}
+.footnote-definition {
+margin-left: 3em;
+margin-right: 3em;
+color: #444;
+}
+.footnote-definition-label {
+float: left;
+margin-right: .6em;
+}
+pre {
+overflow: scroll;
+font-size: 11pt;
+}
+p {
+line-height: 18pt;
+font-size: 12pt;
+}
+@media (prefers-color-scheme: dark) {
+  body {
+  background-color: black;
+  color: white;
+  }
+  a {
+  color: #0AF;
+  }
+  a:visited {
+  color: #AAF;
+  }
+  .footnote-definition {
+  color: #BBB;
+  }
+}
+</style>
+</head>
+
+<body>
+  <main>
+    {% block content %} {% endblock content %}
+  </main>
+</body>
+
+</html>
